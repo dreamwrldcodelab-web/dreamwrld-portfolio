@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  margin: 0;
+ min-height: 100vh;
+ color: #ffffff;
+}
+ .container
+ {
+  width: 100%;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    background:  #1f1f1e;
+ }
+
+ .image
+ {
+  height: 125px;
+  width: 125px;
+ }
+ .avatar
+ {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+ }
+
+ .hero
+ {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+ }
+
+ .hero h1
+ {
+  font-size: 600;
+  font-weight: bolder;
+ }
+
+ .hero p
+ {
+  font-size: 400;
+  font-weight: 14px;
+  color: #bbb7b7;
+ }
+
+ .buttons
+ {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+ }
+
+ .buttons a{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background:  #000;
+  padding: 20px 40px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+  overflow: hidden;
+ }
+
+ .buttons a:hover{
+  background: linear-gradient(45deg, #1b72c4, #0cb98e, #a18814);
+   box-shadow: 0 0 25px rgba(255,255,255,0.3);
+   transform: scale(1.02);
+  transition: all 0.3s ease;
+ }
+
+ .icon
+ {
+  display: flex;
+  gap: 23px;
+  margin-top: 40px;
+ }
+
+ .icon a
+ {
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: bold;
+  color: #fff;
+  transition: all 0.3s ease;
+ }
+
+ .icon a:hover
+ {
+  transform: translateY(-4px);
+ }

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  background-color: #1f1d1d;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 0;
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(5, 5, 5, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.image{
+  width: 125px;
+  height: 125px;
+}
+.avatar{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero{
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.hero h1{
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.hero p{
+  font-weight: 400;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.buttons
+{
+  margin-top: 15px;
+ display: grid;
+ grid-template-columns: 1fr,1fr,1fr;
+ max-width: 100%;
+ gap: 20px
+}
+.buttons a
+{
+  width: 300px;
+ background: rgba(0, 0, 0, 0.15);
+ padding: 20px 50px;
+ text-decoration: none;
+ font-weight: 600;
+ color:#fff;
+ border-radius: 50px;
+ text-align: center;
+ border: 2px solid rgba(0, 0, 0, 0.4)
+
+}
+
+.buttons a:hover
+{
+  transform: translateY(-4px);
+  transform: scale(1.01);
+}
+
+.icons
+{
+
+ display: flex; 
+ flex-direction: row;
+ justify-content: center;
+ gap: 30px;
+ margin-top: 70px;
+}
+
+.icons a
+{
+text-decoration: none;  
+color: #fff;
+font-size: 23px;
+transition: all 0.3s ease;
+}
+
+.icons a:hover{
+  transform: scale(1.01);
+  transform: translateY(-4px);
+}
+
+.footer
+{
+ margin-top: 50px;
+ font-size: 13px; 
+ color: #dad4d4;
+}

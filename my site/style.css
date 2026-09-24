@@ -1,0 +1,1171 @@
+
+/* ==================================================
+   GOOGLE FONT
+================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&family=Pliant:wght@400;500;600;700;800&display=swap');
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Pliant", sans-serif;
+
+    text-decoration: none;
+
+    outline: none;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #000;
+    color: #fff;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    color: inherit;
+}
+
+
+/* ==================================================
+   COLOR SYSTEM
+================================================== */
+
+:root {
+
+    --blue: rgb(41, 82, 197);
+
+    --purple: rgb(172, 75, 172);
+
+    --gradient:
+        linear-gradient(
+            to right,
+            var(--blue),
+            var(--purple)
+        );
+
+    --page-padding: 5%;
+
+    --section-gap: 10rem;
+
+    --small-gap: 2rem;
+
+    --medium-gap: 4rem;
+
+    --large-gap: 8rem;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    min-height: 8rem;
+
+    padding: 1.5rem var(--page-padding);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo {
+
+    font-size: 2.5rem;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    background: var(--gradient);
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    transition: 0.3s ease;
+}
+
+
+.logo:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3.5rem;
+}
+
+
+.navbar a {
+
+    position: relative;
+
+    font-size: 1.7rem;
+
+    font-weight: 500;
+
+    padding: 0.8rem 0;
+
+    transition: 0.3s ease;
+}
+
+
+.navbar a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 0.2rem;
+
+    background: var(--gradient);
+
+    transition: 0.3s ease;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+
+    background: var(--gradient);
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+
+.navbar a:hover::after,
+.navbar a.active::after {
+
+    width: 100%;
+}
+
+
+/* ==================================================
+   MOBILE MENU BUTTON
+================================================== */
+
+.menu-button {
+
+    display: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 3rem;
+
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   GENERAL SECTION
+================================================== */
+
+section {
+
+    min-height: 100vh;
+
+    padding:
+        12rem
+        var(--page-padding)
+        8rem;
+}
+
+
+/* ==================================================
+   HOME
+================================================== */
+
+.home {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: var(--large-gap);
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   HERO IMAGE
+================================================== */
+
+.hero-image {
+
+    flex: 0 0 auto;
+}
+
+
+.avatar {
+
+    width: 34rem;
+
+    height: 34rem;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 0.4rem solid transparent;
+
+    background:
+        linear-gradient(#000, #000) padding-box,
+        var(--gradient) border-box;
+
+    box-shadow:
+        0 0 25px rgba(41, 82, 197, 0.35);
+
+    transition: 0.3s ease;
+}
+
+
+.avatar:hover {
+
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 40px rgba(172, 75, 172, 0.4);
+}
+
+
+/* ==================================================
+   HOME CONTENT
+================================================== */
+
+.home-content {
+
+    max-width: 65rem;
+}
+
+
+.small-heading {
+
+    font-size: 1.8rem;
+
+    margin-bottom: 1rem;
+
+    opacity: 0.8;
+}
+
+
+.home-content h1 {
+
+    font-size: clamp(4rem, 6vw, 7rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 1.5rem;
+}
+
+
+.home-content h1 span {
+
+    display: block;
+
+    background: var(--gradient);
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+
+/* ==================================================
+   TYPING ANIMATION
+================================================== */
+
+.typing-text {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 0.8rem;
+
+    font-size: clamp(2rem, 3vw, 3.2rem);
+
+    margin-bottom: 2rem;
+}
+
+
+.typing-wrapper {
+
+    position: relative;
+
+    display: inline-block;
+
+    height: 4rem;
+
+    min-width: 25rem;
+}
+
+
+.typing-word {
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    width: 0;
+
+    background: var(--gradient);
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    border-right: 0.2rem solid var(--blue);
+
+    opacity: 0;
+}
+
+
+/* WORD 1 */
+
+.word-one {
+
+    animation:
+        typing-one 9s infinite,
+        blink-cursor 0.7s infinite;
+}
+
+
+/* WORD 2 */
+
+.word-two {
+
+    animation:
+        typing-two 9s infinite,
+        blink-cursor 0.7s infinite;
+
+    animation-delay: 3s;
+}
+
+
+/* WORD 3 */
+
+.word-three {
+
+    animation:
+        typing-three 9s infinite,
+        blink-cursor 0.7s infinite;
+
+    animation-delay: 6s;
+}
+
+
+@keyframes typing-one {
+
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    20% {
+        width: 18rem;
+        opacity: 1;
+    }
+
+    30% {
+        width: 18rem;
+        opacity: 1;
+    }
+
+    33% {
+        width: 0;
+        opacity: 0;
+    }
+
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+@keyframes typing-two {
+
+    0%,
+    33% {
+        width: 0;
+        opacity: 0;
+    }
+
+    36% {
+        width: 0;
+        opacity: 1;
+    }
+
+    53% {
+        width: 15rem;
+        opacity: 1;
+    }
+
+    63% {
+        width: 15rem;
+        opacity: 1;
+    }
+
+    66% {
+        width: 15rem;
+        opacity: 1;
+    }
+
+    100% {
+        width: 15rem;
+        opacity: 1;
+    }
+}
+
+
+@keyframes typing-three {
+
+    0%,
+    66% {
+        width: 0;
+        opacity: 0;
+    }
+
+    69% {
+        width: 0;
+        opacity: 1;
+    }
+
+    86% {
+        width: 13rem;
+        opacity: 1;
+    }
+
+    96% {
+        width: 13rem;
+        opacity: 1;
+    }
+
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+@keyframes blink-cursor {
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/* ==================================================
+   HERO DESCRIPTION
+================================================== */
+
+.hero-description {
+
+    max-width: 65rem;
+
+    font-size: 1.7rem;
+
+    line-height: 1.8;
+
+    color: #d0d0d0;
+
+    margin-bottom: 2.5rem;
+}
+
+
+/* ==================================================
+   SOCIAL LINKS
+================================================== */
+
+.social-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    margin: 2.5rem 0;
+}
+
+
+.social-links a {
+
+    width: 4.5rem;
+
+    height: 4.5rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 0.2rem solid var(--blue);
+
+    border-radius: 50%;
+
+    font-size: 1.8rem;
+
+    transition: 0.3s ease;
+}
+
+
+.social-links a:hover {
+
+    transform: translateY(-0.4rem) scale(1.05);
+
+    border-color: var(--purple);
+
+    box-shadow:
+        0 0 20px rgba(172, 75, 172, 0.5);
+}
+
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 1.2rem 2.8rem;
+
+    border-radius: 5rem;
+
+    font-size: 1.7rem;
+
+    font-weight: 600;
+
+    background: var(--gradient);
+
+    border: 0.2rem solid var(--blue);
+
+    transition: 0.3s ease;
+}
+
+
+.btn:hover {
+
+    transform: translateY(-0.3rem);
+
+    box-shadow:
+        0 0 25px rgba(41, 82, 197, 0.5);
+}
+
+
+/* ==================================================
+   SECTION HEADINGS
+================================================== */
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 6rem;
+}
+
+
+.section-heading p {
+
+    font-size: 1.4rem;
+
+    letter-spacing: 0.2rem;
+
+    color: #aaa;
+
+    margin-bottom: 1rem;
+}
+
+
+.section-heading h2 {
+
+    font-size: clamp(3.5rem, 5vw, 5rem);
+}
+
+
+.section-heading h2 span {
+
+    background: var(--gradient);
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+
+/* ==================================================
+   SERVICES
+================================================== */
+
+.services {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+.service-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 3rem;
+}
+
+
+.service-card {
+
+    padding: 3.5rem;
+
+    min-height: 30rem;
+
+    border: 0.1rem solid #222;
+
+    border-radius: 2rem;
+
+    background: #080808;
+
+    transition: 0.3s ease;
+}
+
+
+.service-card:hover {
+
+    transform: translateY(-0.8rem);
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 30px rgba(41, 82, 197, 0.15);
+}
+
+
+.service-card i {
+
+    font-size: 4rem;
+
+    background: var(--gradient);
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+
+.service-card h3 {
+
+    font-size: 2.5rem;
+
+    margin: 2rem 0 1rem;
+}
+
+
+.service-card p {
+
+    font-size: 1.6rem;
+
+    line-height: 1.7;
+
+    color: #aaa;
+
+    margin-bottom: 2rem;
+}
+
+
+.service-card span {
+
+    font-size: 1.5rem;
+
+    color: var(--blue);
+}
+
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    min-height: 70vh;
+}
+
+
+/* ==================================================
+   PORTFOLIO CATEGORY PAGES
+================================================== */
+
+.portfolio-page {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding-top: 15rem;
+}
+
+
+.page-intro {
+
+    text-align: center;
+
+    margin-bottom: 7rem;
+}
+
+
+.page-intro h1 {
+
+    font-size: clamp(4rem, 6vw, 6rem);
+
+    margin-bottom: 1.5rem;
+}
+
+
+.page-intro h1 span {
+
+    background: var(--gradient);
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+
+.page-intro p {
+
+    max-width: 65rem;
+
+    margin: auto;
+
+    font-size: 1.7rem;
+
+    line-height: 1.8;
+
+    color: #aaa;
+}
+
+
+/* ==================================================
+   PROJECT GRID
+================================================== */
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 3rem;
+}
+
+
+.project-card {
+
+    overflow: hidden;
+
+    border: 0.1rem solid #222;
+
+    border-radius: 1.8rem;
+
+    background: #080808;
+
+    transition: 0.3s ease;
+}
+
+
+.project-card:hover {
+
+    transform: translateY(-0.7rem);
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 30px rgba(41, 82, 197, 0.15);
+}
+
+
+.project-image {
+
+    width: 100%;
+
+    height: 25rem;
+
+    object-fit: cover;
+
+    background: #111;
+}
+
+
+.project-info {
+
+    padding: 2.5rem;
+}
+
+
+.project-info h3 {
+
+    font-size: 2.3rem;
+
+    margin-bottom: 1rem;
+}
+
+
+.project-info p {
+
+    font-size: 1.5rem;
+
+    line-height: 1.7;
+
+    color: #aaa;
+
+    margin-bottom: 1.5rem;
+}
+
+
+.project-link {
+
+    font-size: 1.5rem;
+
+    color: var(--blue);
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+    padding: 3rem var(--page-padding);
+
+    text-align: center;
+
+    border-top: 0.1rem solid #1b1b1b;
+}
+
+
+footer p {
+
+    color: #777;
+
+    font-size: 1.4rem;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .home {
+
+        gap: 5rem;
+    }
+
+    .avatar {
+
+        width: 30rem;
+
+        height: 30rem;
+    }
+
+    .service-grid,
+    .project-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 995px) {
+
+    .header {
+
+        min-height: 7rem;
+
+        padding:
+            1.5rem 5%;
+    }
+
+
+    .menu-button {
+
+        display: block;
+    }
+
+
+    .navbar {
+
+        position: absolute;
+
+        top: 100%;
+
+        right: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding: 2rem 5%;
+
+        background: #050505;
+
+        border-top: 0.1rem solid #222;
+
+        border-bottom: 0.2rem solid var(--blue);
+    }
+
+
+    .navbar.active {
+
+        display: flex;
+    }
+
+
+    .navbar a {
+
+        width: 100%;
+
+        padding: 1.5rem 0;
+
+        font-size: 1.8rem;
+    }
+
+
+    .home {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 4rem;
+
+        padding-top: 12rem;
+    }
+
+
+    .avatar {
+
+        width: 27rem;
+
+        height: 27rem;
+    }
+
+
+    .home-content {
+
+        max-width: 100%;
+    }
+
+
+    .social-links {
+
+        justify-content: center;
+    }
+
+
+    .typing-text {
+
+        justify-content: center;
+    }
+
+
+    .service-grid,
+    .project-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .portfolio-page {
+
+        padding-top: 12rem;
+    }
+
+}
+
+
+/* ==================================================
+   SMALL PHONES
+================================================== */
+
+@media (max-width: 500px) {
+
+    html {
+
+        font-size: 58%;
+    }
+
+
+    section {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+    }
+
+
+    .logo {
+
+        font-size: 2.2rem;
+    }
+
+
+    .avatar {
+
+        width: 23rem;
+
+        height: 23rem;
+    }
+
+
+    .typing-wrapper {
+
+        min-width: 100%;
+
+        height: 3.5rem;
+    }
+
+
+    .typing-text {
+
+        font-size: 2.2rem;
+    }
+
+
+    .hero-description {
+
+        font-size: 1.5rem;
+    }
+
+
+    .social-links a {
+
+        width: 4rem;
+
+        height: 4rem;
+    }
+
+}

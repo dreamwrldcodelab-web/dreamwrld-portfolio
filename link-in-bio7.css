@@ -1,0 +1,109 @@
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.page
+{
+background-color: transparent; 
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container
+{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+overflow: hidden;
+}
+.image
+{
+width: 400px;
+height: 300px;
+}
+.avatar
+{
+width: 100%;
+height: 100%;
+object-fit: cover;
+
+}
+
+ .photo
+{
+ width: 100%;
+ object-position: center;
+ object-fit: cover;
+}
+
+.hero-info
+{
+ text-align: center; 
+ margin-top: 25px;
+}
+
+.hero-info h1
+{
+margin-bottom: 8px;
+font-style: arial;
+font-weight: 800;
+}
+
+.hero-info p
+{
+font-size: large;
+font-weight: 500;
+margin-bottom: 25px;
+}
+
+a
+{
+display: block;
+text-decoration: none;
+color: #fff;
+background-color: #000;
+width: 400px;
+padding: 20px 0;
+border-radius: 16px;
+
+}
+
+.btn
+{
+display: flex;
+justify-content: center;
+margin-bottom: 5px;
+}
+
+.btn a:active
+{
+ transform: scale(0.98); 
+}
+.horizontal-line
+{
+height: 1px;
+width: 300px;
+background-color: #000;
+justify-self: center;
+margin-bottom: 20px;
+}
+
+.grid 
+{
+display: grid;
+grid-template-columns: 200px 200px;  
+gap: 10px;                                                                                   
+}
+
+footer p
+{
+color: rgb(41, 37, 37);
+margin-top: 30px;
+}

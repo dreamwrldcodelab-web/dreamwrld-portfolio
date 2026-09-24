@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
+
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+ .page
+{
+position: relative;
+min-height: 100vh;
+background-color: rgb(221, 151, 45);
+}
+
+.profile-background
+{
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 200px;
+ width: 100%;
+ overflow: hidden;
+ z-index: 1;
+}
+.profile-background::before
+{
+ content: "";
+ position: absolute;
+
+ top: 0;
+ left: 0;
+ height: 200px;
+ width: 100%;
+ background-image: url(christian-lambert-vmIWr0NnpCQ-unsplash.jpg);
+ background-size: cover;
+ background-position: center; 
+ filter: blur(8px);
+}
+
+.content-container
+{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ z-index: 2;
+}
+
+.content-container .card 
+{
+ display: grid;
+ grid-template-columns: 300px;
+ background-color: #fff;
+ border-radius: 30px;
+ padding: 4em 25px;
+ text-align: center;
+ margin-top: 9em;
+ gap: 15px;
+ z-index: 2;
+ box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.content-container .horizontal-line
+{
+ width: 30%;
+ justify-self: center;
+ height: 2px;
+ background-color: black;
+ margin-top: -5;
+}
+
+.content-container h2
+{
+ margin-top: 1.2em;
+ font-weight: 600; 
+ font-size: xx-large;
+}
+.content-container h3
+{
+ font-weight: 530; 
+}
+.content-container p
+{
+ font-weight: 400; 
+ font-size: 16px; 
+ margin-top: 15px;
+}
+.content-container .image
+{
+width: 125px;
+height: 125px;
+margin-top: -24em;
+z-index: 3;
+}
+
+.content-container .image .avatar
+{
+height: 100%;
+width: 100%;
+border-radius: 50%;
+object-position: center;
+object-fit: cover;
+box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.content-container .buttons
+{
+display: flex; 
+flex-direction: column;
+justify-content: center; 
+align-items: center;
+gap: 10px;
+z-index: 3;
+margin-top: 14em;
+}
+
+.content-container .buttons a
+{
+ display: inline-block;
+ text-decoration: none; 
+ width: 250px;
+ text-align: center;
+ background-color: rgb(235, 196, 138);
+ padding: 18px;
+ border-radius: 50px;
+ color: #ffffff;
+ box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.content-container .buttons a:hover
+{
+ transition: all 0.3s ease; 
+transform: translateY(-4px); 
+ transform: scale(1.01);
+  color: #ffffff;
+ box-shadow: 4px 6px 25x rgba(0,0,0,0.15);
+}
+
+footer
+{
+ margin-top: 1.2em;
+ padding-bottom: 30px;
+ justify-self: center;
+}
+
+footer a
+{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 28px;
+}

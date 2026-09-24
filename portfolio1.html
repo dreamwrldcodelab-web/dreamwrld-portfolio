@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dreamwrld Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#0d0d0d;
+  color:white;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:15px 20px;
+  background:rgba(0,0,0,0.6);
+
+  display:flex;
+  justify-content:space-between;
+  z-index:1000;
+}
+
+nav h1{
+  font-size:1.2rem;
+}
+
+nav button{
+  background:none;
+  border:1px solid #444;
+  color:white;
+  padding:6px 12px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+}
+
+.hero h2{
+  font-size:2.5rem;
+}
+
+.hero p{
+  color:#aaa;
+  margin-top:10px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:40px 20px;
+}
+
+.card{
+  position:relative;
+  border-radius:15px;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  transition:0.4s;
+}
+
+.overlay{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:20px;
+  background:linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.card:hover img{
+  transform:scale(1.1);
+}
+
+/* PAGES */
+.page{
+  display:none;
+  padding-top:80px;
+  animation:fade 0.5s ease;
+}
+
+.active{
+  display:block;
+}
+
+.content{
+  padding:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+.content img{
+  width:100%;
+  border-radius:12px;
+  margin:20px 0;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#777;
+}
+
+/* ANIMATION */
+@keyframes fade{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hero h2{
+    font-size:1.8rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>Dreamwrld</h1>
+  <button type="button" onclick="goHome()">Home</button>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <div class="hero">
+    <h2>Creative Developer</h2>
+    <p>Designing digital experiences that feel premium</p>
+  </div>
+
+  <div class="grid">
+    <div class="card" onclick="openPage('lifestyle')">
+      <img src="https://source.unsplash.com/600x800/?lifestyle">
+      <div class="overlay">Lifestyle</div>
+    </div>
+
+    <div class="card" onclick="openPage('food')">
+      <img src="https://source.unsplash.com/600x800/?food">
+      <div class="overlay">Food</div>
+    </div>
+
+    <div class="card" onclick="openPage('house')">
+      <img src="https://source.unsplash.com/600x800/?apartment">
+      <div class="overlay">House Rent</div>
+    </div>
+
+    <div class="card" onclick="openPage('furniture')">
+      <img src="https://source.unsplash.com/600x800/?furniture">
+      <div class="overlay">Furniture</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT PAGES -->
+
+<section id="lifestyle" class="page">
+  <div class="content">
+    <h2>Lifestyle Project</h2>
+    <img src="">"
+
+    <p>
+      This project focused on building a visually immersive lifestyle platform.
+      I handled UI design, responsiveness, and interactive elements.
+    </p>
+
+    <h3>My Role</h3>
+    <p>
+      Front-end development, layout design, and animation integration.
+    </p>
+
+    <h3>Impact</h3>
+    <p>
+      Improved engagement through clean visuals and intuitive navigation.
+    </p>
+  </div>
+</section>
+
+<section id="food" class="page">
+  <div class="content">
+    <h2>Food Experience UI</h2>
+    <img src="https://source.unsplash.com/900x600/?restaurant">
+
+    <p>
+      Designed a modern food ordering interface focused on simplicity and speed.
+    </p>
+
+    <h3>My Role</h3>
+    <p>
+      Built responsive UI and optimized mobile interactions.
+    </p>
+
+    <h3>Impact</h3>
+    <p>
+      Increased usability and reduced user friction.
+    </p>
+  </div>
+</section>
+
+<section id="house" class="page">
+  <div class="content">
+    <h2>House Rent Platform</h2>
+    <img src="https://source.unsplash.com/900x600/?real-estate">
+
+    <p>
+      A property listing interface designed for clarity and accessibility.
+    </p>
+
+    <h3>My Role</h3>
+    <p>
+      Structured layout, filtering UI, and visual hierarchy.
+    </p>
+
+    <h3>Impact</h3>
+    <p>
+      Helped users find properties faster with better UX.
+    </p>
+  </div>
+</section>
+
+<section id="furniture" class="page">
+  <div class="content">
+    <h2>Furniture Showcase</h2>
+    <img src="https://source.unsplash.com/900x600/?interior">
+
+    <p>
+      Built a premium catalog UI for showcasing furniture collections.
+    </p>
+
+    <h3>My Role</h3>
+    <p>
+      UI/UX design and responsive grid system.
+    </p>
+
+    <h3>Impact</h3>
+    <p>
+      Enhanced product visibility and user interaction.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Dreamwrld Codelab — Built with precision & creativity
+</footer>
+
+<script>
+function openPage(pageId){
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function goHome(){
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('home').classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
