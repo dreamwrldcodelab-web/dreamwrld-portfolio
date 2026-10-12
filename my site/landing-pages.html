@@ -1,181 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basic, Premium and Exclusive landing pages by DreamWrld Codelab.">
     <title>Landing Pages | DreamWrld Codelab</title>
-
     <link rel="stylesheet" href="style.css">
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    >
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-
 <body>
+    <header class="header">
+        <a href="index.html" class="logo">DreamWrld<br>Codelab</a>
+        <nav class="navbar" id="navbar" aria-label="Main navigation"><a href="index.html">Home</a><a href="profile-card.html">Profile Cards</a><a href="link-in-bio.html">Link in Bio</a><a href="landing-pages.html" class="active">Landing Pages</a><a href="index.html#contact">Contact</a></nav>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navbar"><span></span><span></span><span></span></button>
+    </header>
 
-<header class="header">
+    <!-- PORTFOLIO CATEGORY PAGES -->
 
-    <a href="index.html" class="logo">
-        DreamWrld<br>Codelab
-    </a>
+    <main class="portfolio-page">
+        <div class="page-intro"><p class="small-heading">BUSINESS · PRODUCT · PERSONAL BRAND</p><h1>Landing <span>Pages</span></h1><p>Present your offer with clarity and help visitors understand what you do and where to go next.</p></div>
+        
 
-    <button class="menu-button" aria-label="Open navigation">
-        <i class="bi bi-list"></i>
-    </button>
-
-    <nav class="navbar">
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="profile-card.html">
-            Profile Cards
-        </a>
-
-        <a href="link-in-bio.html">
-            Link in Bio
-        </a>
-
-        <a href="landing-pages.html" class="active">
-            Landing Pages
-        </a>
-
-        <a href="index.html#contact">
-            Contact
-        </a>
-
-    </nav>
-
-</header>
-
-
-<main class="portfolio-page">
-
-    <div class="page-intro">
-
-        <h1>
-            Landing <span>Pages</span>
-        </h1>
-
-        <p>
-            Responsive landing pages designed to communicate
-            an offer clearly and guide visitors toward an action.
-        </p>
-
-    </div>
-
-
-    <div class="project-grid">
-
-        <a href="#" class="project-card">
-
-            <img
-                src="images/landing-page-1.jpg"
-                alt="Business landing page"
-                class="project-image"
-            >
-
-            <div class="project-info">
-
-                <h3>
-                    Business Landing Page
-                </h3>
-
-                <p>
-                    A modern landing page designed around
-                    a business service and clear call-to-action.
-                </p>
-
-                <span class="project-link">
-                    View Project →
-                </span>
-
+        <section class="works-section" id="works">
+            <div class="section-heading"><p>LANDING PAGE PROJECTS</p><h2>Explore My <span>works</span></h2></div>
+            <div class="project-grid works-grid">
+                <a href="landin-page-projects1.html#basic" class="project-card"><div class="project-image project-art personal-art" aria-hidden="true"></div><div class="project-info"><h3>Business Landing Page</h3><p>View the restaurant demo and its live Basic landing page.</p><span class="project-link">View live example →</span></div></a>
+                <a href="landing-page-project2.html" class="project-card"><div class="project-image project-art creator-art" aria-hidden="true"></div><div class="project-info"><h3>Product Landing Page</h3><p>A product-focused landing page direction and preview status.</p><span class="project-link">View project details →</span></div></a>
+                <a href="landing-page-project3.html" class="project-card"><div class="project-image project-art business-art" aria-hidden="true"></div><div class="project-info"><h3>Personal Brand</h3><p>A landing page direction for presenting work and expertise.</p><span class="project-link">View project details →</span></div></a>
             </div>
-
-        </a>
-
-
-        <a href="#" class="project-card">
-
-            <img
-                src="images/landing-page-2.jpg"
-                alt="Product landing page"
-                class="project-image"
-            >
-
-            <div class="project-info">
-
-                <h3>
-                    Product Landing Page
-                </h3>
-
-                <p>
-                    A product-focused interface designed to
-                    present an offer and guide visitors toward action.
-                </p>
-
-                <span class="project-link">
-                    View Project →
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <a href="#" class="project-card">
-
-            <img
-                src="images/landing-page-3.jpg"
-                alt="Personal brand landing page"
-                class="project-image"
-            >
-
-            <div class="project-info">
-
-                <h3>
-                    Personal Brand
-                </h3>
-
-                <p>
-                    A personal-brand landing page focused on
-                    presenting services and building trust.
-                </p>
-
-                <span class="project-link">
-                    View Project →
-                </span>
-
-            </div>
-
-        </a>
-
-    </div>
-
-</main>
-
-
-<footer>
-
-    <p>
-        © 2026 DreamWrld Codelab. All rights reserved.
-    </p>
-
-</footer>
-
-
-<script src="js/menu.js"></script>
-
+        </section>
+    </main>
+    <footer><p>© 2026 DreamWrld Codelab. All rights reserved.</p></footer>
+    <script src="menu.js"></script>
 </body>
 </html>

@@ -1,265 +1,111 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="DreamWrld Codelab creates profile cards, link in bio pages and responsive landing pages.">
     <title>DreamWrld Codelab | Frontend Developer</title>
-
     <link rel="stylesheet" href="style.css">
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-
 <body>
-
-    <!-- ================= HEADER ================= -->
-
     <header class="header">
-
-        <a href="index.html" class="logo">
-            DreamWrld<br>Codelab
-        </a>
-
-        <button class="menu-button" aria-label="Open navigation">
-            <i class="bi bi-list"></i>
-        </button>
-
-        <nav class="navbar">
-
-            <a href="index.html" class="active">
-                Home
-            </a>
-
-            <a href="profile-card.html">
-                Profile Cards
-            </a>
-
-            <a href="link-in-bio.html">
-                Link in Bio
-            </a>
-
-            <a href="landing-pages.html">
-                Landing Pages
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
+        <a href="index.html" class="logo">DreamWrld<br>Codelab</a>
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About Me</a>
+            <a href="#faqs">FAQs</a>
+            <a href="#contact">Contact</a>
         </nav>
-
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navbar">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
-
-    <!-- ================= HOME ================= -->
-
     <main>
+        <!-- HERO SECTION -->
 
         <section class="home">
 
-            <div class="hero-image">
+            <!-- HERO IMAGE -->
 
-                <img
-                    src="dreamwrldcodelab.png"
-                    alt="DreamWrld Codelab profile"
-                    class="avatar"
-                >
-
-            </div>
-
+            <div class="hero-image"><img src="dreamwrldcodelab.png" alt="DreamWrld Codelab artwork" class="avatar"></div>
+             
+            <!-- HOME CONTENT -->
 
             <div class="home-content">
+                <p class="small-heading">Welcome to</p>
+                <h1>DreamWrld <span>Codelab</span></h1>
 
-                <p class="small-heading">
-                    Welcome to
-                </p>
+                <!-- TYPING ANIMATION -->
 
-                <h1>
-                    DreamWrld
-                    <span>Codelab</span>
-                </h1>
+                <div class="typing-animation">
+                    <div class="static text">I'm a</div>
+                    <ul class="dynamic-text">
+                        <li><span>Frontend Developer</span></li>
+                        <li><span>Web Designer</span></li>
+                        <li><span>web builder</span></li>
+                        <li><span>Freelancer</span></li>
+                    </ul>
+                </div>
 
+                <!-- HERO DESCRIPTION -->
 
-                <!-- TYPING AREA -->
-
-                <h2 class="typing-text">
-
-                    I'm a
-
-                    <span class="typing-wrapper">
-
-                        <span class="typing-word word-one">
-                            Frontend Developer
-                        </span>
-
-                        <span class="typing-word word-two">
-                            UI/UX Designer
-                        </span>
-
-                        <span class="typing-word word-three">
-                            Web Designer
-                        </span>
-
-                    </span>
-
-                </h2>
-
-
-                <p class="hero-description">
-                    I build clean, responsive and visually engaging
-                    websites for business owners and content creators.
-                    My work includes profile cards, link-in-bio pages,
-                    landing pages and portfolio websites designed to
-                    turn visitors into potential clients.
-                </p>
-
+                <p class="hero-description">I build clean, responsive and visually engaging websites for business owners and content creators. My work includes profile cards, link-in-bio pages and landing pages that make the next step clear.</p>
 
                 <!-- SOCIAL LINKS -->
 
-                <div class="social-links">
-
-                    <a href="#" title="TikTok">
-                        <i class="bi bi-tiktok"></i>
-                    </a>
-
-                    <a href="#" title="WhatsApp">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
-
-                    <a href="#" title="Instagram">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-
-                    <a href="#" title="Facebook">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-
-                    <a href="#" title="Email">
-                        <i class="bi bi-envelope-fill"></i>
-                    </a>
-
+                <div class="social-links" aria-label="Social channels">
+                    <a href="https://tiktok.com/@dreamwrld.codelab" title="TikTok" target="_blank"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
+                    <a href="https://wa.me/2349037998240" title="WhatsApp" target="_blank"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/dreamwrldcodelab" title="Instagram" target="_blank"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                    <a href="https://threads.net/dreamwrldcodelab" title="Threads" target="_blank"><i class="bi bi-threads" aria-hidden="true"></i></a>
+                    <a href="mailto:dreamwrldcodelab@gmail.com" title="Email"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a>
                 </div>
 
+                <!--  BUTTON -->
 
-                <a href="#contact" class="btn">
-                    Hire Me
-                </a>
-
+                <a href="https://wa.me/2349037998240" class="btn" target="_blank">Hire Me</a>
             </div>
-
         </section>
 
-
-        <!-- ================= SERVICES ================= -->
+        <!-- SERVICES HEADINGS AND SERVICES -->
 
         <section class="services" id="services">
-
-            <div class="section-heading">
-
-                <p>WHAT I BUILD</p>
-
-                <h2>
-                    My <span>Services</span>
-                </h2>
-
-            </div>
-
-
+            <div class="section-heading"><p>WHAT I BUILD</p><h2>My <span>Services</span></h2></div>
             <div class="service-grid">
-
-                <a href="profile-card.html" class="service-card">
-
-                    <i class="bi bi-person-vcard"></i>
-
-                    <h3>Profile Cards</h3>
-
-                    <p>
-                        Modern profile cards for personal brands,
-                        creators and professionals.
-                    </p>
-
-                    <span>View Work →</span>
-
-                </a>
-
-
-                <a href="link-in-bio.html" class="service-card">
-
-                    <i class="bi bi-link-45deg"></i>
-
-                    <h3>Link in Bio</h3>
-
-                    <p>
-                        Mobile-friendly link pages that bring
-                        multiple important links into one place.
-                    </p>
-
-                    <span>View Work →</span>
-
-                </a>
-
-
-                <a href="landing-pages.html" class="service-card">
-
-                    <i class="bi bi-window"></i>
-
-                    <h3>Landing Pages</h3>
-
-                    <p>
-                        Conversion-focused landing pages for
-                        businesses, products and personal brands.
-                    </p>
-
-                    <span>View Work →</span>
-
-                </a>
-
+                <a href="profile-card.html" class="service-card"><i class="bi bi-person-vcard" aria-hidden="true"></i><h3>Profile Cards</h3><p>Focused introductions for personal brands, creators and professionals.</p><span>View Work →</span></a>
+                <a href="link-in-bio.html" class="service-card"><i class="bi bi-link-45deg" aria-hidden="true"></i><h3>Link in Bio</h3><p>A mobile-ready hub for your key links, offers and channels.</p><span>View Work →</span></a>
+                <a href="landing-pages.html" class="service-card"><i class="bi bi-window" aria-hidden="true"></i><h3>Landing Pages</h3><p>Clear pages for businesses, products and personal brands.</p><span>View Work →</span></a>
             </div>
-
         </section>
 
+        <!-- ABOUT, FAQS AND CONTACT SECTIONS -->
 
-        <!-- ================= CONTACT ================= -->
+        <section class="about" id="about">
+            <div class="section-heading"><p>WHO I AM</p><h2>About <span>Me</span></h2></div>
+            <p class="info-paragraph">I create modern websites that help people and businesses turn their ideas into a professional online presence. Each project is shaped around the client's identity, goals and audience, so visitors can understand what is offered and where to go next.</p>
+        </section>
+
+        <section class="faqs" id="faqs">
+            <div class="section-heading"><p>FREQUENTLY ASKED QUESTIONS</p><h2>FAQs About <span>My Work</span></h2></div>
+            <div class="faq-list">
+                <details><summary>What type of websites do you create?</summary><p>Profile cards, link-in-bio pages and landing pages for creators, professionals and businesses.</p></details>
+                <details><summary>Will my website work on phones?</summary><p>The layouts are made to adapt to phones, tablets and desktop screens.</p></details>
+                <details><summary>How are scope and pricing decided?</summary><p>They depend on the page and its content or features. Share your goals to discuss a suitable scope.</p></details>
+                <details><summary>Can you redesign an existing website?</summary><p>Yes. Existing pages can be reviewed for clearer structure, responsive layout and a more polished experience.</p></details>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
 
         <section class="contact" id="contact">
-
-            <div class="section-heading">
-
-                <p>LET'S WORK TOGETHER</p>
-
-                <h2>
-                    Have a project <span>in mind?</span>
-                </h2>
-
-            </div>
-
-            <a href="mailto:your@email.com" class="btn">
-                Contact Me
-            </a>
-
+            <div class="section-heading"><p>LET'S WORK TOGETHER</p><h2>Have a project <span>in mind?</span></h2></div>
+            <a href="https://wa.me/2349037998240" class="btn">Contact Me</a>
         </section>
-
     </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <p>
-            © 2026 DreamWrld Codelab. All rights reserved.
-        </p>
-
-    </footer>
-
-
-    <script src="js/menu.js"></script>
-
+    <footer><p>© 2026 DreamWrld Codelab. All rights reserved.</p></footer>
+    <script src="menu.js"></script>
 </body>
 </html>

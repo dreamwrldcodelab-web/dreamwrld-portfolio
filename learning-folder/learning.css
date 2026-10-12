@@ -1,0 +1,187 @@
+body
+{
+min-height: 100vh;
+background-color: black;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.text {
+    display: flex;
+    font-size: clamp(2rem, 5vw, 4rem);
+    gap: 0.8rem;
+    min-width: 20rem;
+}
+
+.typing-wrapper {
+    position: relative;
+    color: blueviolet;
+    display: inline-block;
+
+    /*
+    Gives the wrapper enough room for the
+    longest word.
+    */
+    min-width: 10ch;
+}
+
+
+/* --------------------------------
+   COMMON TYPING WORD SETTINGS
+--------------------------------- */
+
+.typing-words {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/* --------------------------------
+   WORD 1
+--------------------------------- */
+
+.words-one {
+    border-right: 4px solid white;
+    animation:
+        words-one 9s steps(10) 0s infinite, blinking 0.7s infinite;
+        
+}
+
+
+/* --------------------------------
+   WORD 2
+--------------------------------- */
+
+.words-two {
+   border-right: 4px solid white;
+    animation:
+        words-two 9s steps(7) 9s infinite, blinking 0.7s infinite;
+        
+}
+
+
+/* --------------------------------
+   WORD 3
+--------------------------------- */
+
+.words-three {
+    border-right: 4px solid white;
+    animation:
+        words-three 9s steps(8) 18s infinite, blinking 0.7s infinite;
+        
+}
+
+
+/* --------------------------------
+   WORD 1 ANIMATION
+--------------------------------- */
+
+@keyframes words-one {
+
+    /* hidden */
+    0% {
+        width: 0;
+    }
+
+    /* type */
+    5% {
+        width: 10ch;
+    }
+
+    /* pause */
+    10% {
+        width: 10ch;
+    }
+
+    /* delete */
+    20% {
+        width: 0;
+    }
+
+    /* stay hidden */
+    25% {
+        width: 0;
+    }
+}
+
+
+
+@keyframes words-two {
+
+    /* hidden */
+    26% {
+        width: 0;
+    }
+
+    /* type */
+    30% {
+        width: 10ch;
+    }
+
+    /* pause */
+    40% {
+        width: 10ch;
+    }
+
+    /* delete */
+    45% {
+        width: 0;
+    }
+
+    /* stay hidden */
+    50% {
+        width: 0;
+    }
+}
+
+
+
+@keyframes words-three {
+
+    /* hidden */
+    0% {
+        width: 0;
+    }
+
+    /* type */
+    10% {
+        width: 10ch;
+    }
+
+    /* pause */
+    25% {
+        width: 10ch;
+    }
+
+    /* delete */
+    35% {
+        width: 0;
+    }
+
+    /* stay hidden */
+    100% {
+        width: 0;
+    }
+}
+
+
+
+/* --------------------------------
+   CURSOR
+--------------------------------- */
+
+@keyframes blinking {
+
+    50% {
+        border-right-color: transparent;
+    }
+
+}
