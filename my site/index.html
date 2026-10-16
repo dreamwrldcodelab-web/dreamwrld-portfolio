@@ -42,13 +42,14 @@
 
                 <div class="typing-animation">
                     <div class="static text">I'm a</div>
-                    <ul class="dynamic-text">
-                        <li><span>Frontend Developer</span></li>
+                    <ul class="dynamic-text" aria-hidden="true">
+                        <li><span class="typing-word">Frontend Developer</span><span class="typing-cursor" aria-hidden="true"></span></li>
                         <li><span>Web Designer</span></li>
                         <li><span>web builder</span></li>
                         <li><span>Freelancer</span></li>
                     </ul>
                 </div>
+                <span class="visually-hidden" id="typing-status" aria-live="polite" aria-atomic="true">Frontend Developer</span>
 
                 <!-- HERO DESCRIPTION -->
 

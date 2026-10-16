@@ -77,3 +77,124 @@ document.querySelectorAll(".live-project").forEach((project) => {
         }
     });
 });
+
+// Run the home-page typing effect as one stateful sequence, independent of CSS animation timing.
+const typingList = document.querySelector(".dynamic-text");
+
+if (typingList) {
+    const wordItems = [...typingList.querySelectorAll("li > span:not(.typing-cursor)")];
+    const words = wordItems.map((item) => item.textContent.trim()).filter(Boolean);
+    const visibleWord = wordItems[0];
+    const liveStatus = document.getElementById("typing-status");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    if (words.length && visibleWord) {
+        visibleWord.textContent = words[0];
+
+        if (words.length > 1 && !reduceMotion.matches) {
+            const TYPE_DELAY = 85;
+            const DELETE_DELAY = 45;
+            const WORD_PAUSE = 1500;
+            const SWITCH_PAUSE = 180;
+            let wordIndex = 0;
+            let characterIndex = words[0].length;
+            let isDeleting = true;
+            let motionStopped = false;
+            let timer = null;
+            let deadline = 0;
+            let remainingDelay = WORD_PAUSE;
+
+            const setLongestWordWidth = () => {
+                const style = window.getComputedStyle(visibleWord);
+                const canvas = document.createElement("canvas");
+                const context = canvas.getContext("2d");
+                if (!context) return;
+                context.font = style.font;
+                const longestWidth = Math.max(...words.map((word) => context.measureText(word).width));
+                typingList.style.setProperty("--typing-width", `${Math.ceil(longestWidth) + 5}px`);
+            };
+
+            let resizeFrame = null;
+            window.addEventListener("resize", () => {
+                window.cancelAnimationFrame(resizeFrame);
+                resizeFrame = window.requestAnimationFrame(setLongestWordWidth);
+            }, { passive: true });
+
+            const schedule = (delay) => {
+                window.clearTimeout(timer);
+                remainingDelay = delay;
+                deadline = performance.now() + delay;
+                timer = window.setTimeout(tick, delay);
+            };
+
+            const tick = () => {
+                if (motionStopped || reduceMotion.matches) return;
+                const word = words[wordIndex];
+                if (isDeleting) {
+                    characterIndex -= 1;
+                    visibleWord.textContent = word.slice(0, characterIndex);
+                    if (characterIndex === 0) {
+                        wordIndex = (wordIndex + 1) % words.length;
+                        isDeleting = false;
+                        schedule(SWITCH_PAUSE);
+                        return;
+                    }
+                    schedule(DELETE_DELAY);
+                    return;
+                }
+
+                characterIndex += 1;
+                visibleWord.textContent = word.slice(0, characterIndex);
+                if (characterIndex === word.length) {
+                    if (liveStatus) liveStatus.textContent = word;
+                    isDeleting = true;
+                    schedule(WORD_PAUSE);
+                    return;
+                }
+                schedule(TYPE_DELAY);
+            };
+
+            document.addEventListener("visibilitychange", () => {
+                if (document.hidden && timer !== null) {
+                    window.clearTimeout(timer);
+                    timer = null;
+                    remainingDelay = Math.max(0, deadline - performance.now());
+                } else if (!document.hidden && !motionStopped && !reduceMotion.matches && timer === null) {
+                    schedule(remainingDelay);
+                }
+            });
+
+            reduceMotion.addEventListener?.("change", (event) => {
+                if (event.matches) {
+                    motionStopped = true;
+                    window.clearTimeout(timer);
+                    timer = null;
+                    visibleWord.textContent = words[0];
+                    if (liveStatus) liveStatus.textContent = words[0];
+                } else {
+                    motionStopped = false;
+                    wordIndex = 0;
+                    characterIndex = words[0].length;
+                    isDeleting = true;
+                    visibleWord.textContent = words[0];
+                    if (liveStatus) liveStatus.textContent = words[0];
+                    if (!document.hidden) schedule(WORD_PAUSE);
+                }
+            });
+
+            const startAnimation = () => {
+                setLongestWordWidth();
+                if (document.hidden) {
+                    remainingDelay = WORD_PAUSE;
+                } else if (!motionStopped) {
+                    schedule(WORD_PAUSE);
+                }
+            };
+            if (document.fonts?.ready) {
+                document.fonts.ready.then(startAnimation);
+            } else {
+                startAnimation();
+            }
+        }
+    }
+}
